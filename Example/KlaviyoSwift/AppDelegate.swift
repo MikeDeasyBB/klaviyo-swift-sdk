@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         
-        Klaviyo.setupWithPublicAPIKey("YOUR_PUBLIC_API_KEY") 
+        Klaviyo.setupWithPublicAPIKey("9BX3wh")
         
         if zip == nil && email == nil {
             // show login page
@@ -48,29 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         }
         
-        /*
-        Setting Up Push Notifications for Swift 1.2
-        
-        if application.respondsToSelect("registerUserNotificationSettings:") {
-        let types = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
-        let settings = UIUserNotificationSettings(forTypes: types, categories: nil)
+        // Push Notification for Swift 2.0
+        let settings = UIUserNotificationSettings(forTypes: [.Alert,.Badge,.Sound], categories: nil)
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
-        } else {
-        let types = UIRemoteNotificationType.Badge | UIRemoteNotificationType.Alert | UIRemoteNotificationType.Sound
-        application.registerForRemoteNotificationTypes(types)
-        }
-        */
-        
-        // Push Notification for Swift 2.0
-        if #available(iOS 8.0, *) {
-            let settings = UIUserNotificationSettings(forTypes: [.Alert,.Badge,.Sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
-            application.registerForRemoteNotifications()
-        } else {
-            application.registerForRemoteNotificationTypes([.Alert, .Badge, .Sound])
-        }
-        
         
         return true
     }
@@ -109,6 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         // Handle the notification
+        Klaviyo.sharedInstance.handlePush(userInfo)
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {

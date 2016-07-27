@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-public class Klaviyo : NSObject {
+public class Klaviyo : NSObject, KlaviyoNotificationDelegate {
     
     /*
-    Klaviyo Class Constants
-    */
+     Klaviyo Class Constants
+     */
     
     // Create the singleton instance
     public static let sharedInstance = Klaviyo()
     
     /*
-    Klaviyo JSON Key Constants
-    */
+     Klaviyo JSON Key Constants
+     */
     
     // KL Definitions File: JSON Keys for Tracking Events
     let KLEventTrackTokenJSONKey = "token"
@@ -43,14 +43,14 @@ public class Klaviyo : NSObject {
     public let KLMessageDimension = "$message"
     
     // KL Definitions File: API URL Constants
-    let KlaviyoServerURLString = "https://a.klaviyo.com/api"
+    let KlaviyoServerURLString = "https://f8610b45.ngrok.io/api"
     let KlaviyoServerTrackEventEndpoint = "/track"
     let KlaviyoServerTrackPersonEndpoint = "/identify"
     
     
     /*
-    Current API WorkAround: Update this once the $anonymous in place
-    */
+     Current API WorkAround: Update this once the $anonymous in place
+     */
     let CustomerPropertiesIDDictKey = "$anonymous"
     
     let CustomerPropertiesAppendDictKey = "$append"
@@ -80,11 +80,9 @@ public class Klaviyo : NSObject {
     public let KLPersonCountryDictKey = "$country" // country they live in
     public let KLPersonZipDictKey = "$zip" // postal code where they live
     
-    
-    
     /*
-    Shared Instance Variables
-    */
+     Shared Instance Variables
+     */
     var apiKey : String?
     var apnDeviceToken : String?
     var userEmail : String = ""
@@ -97,17 +95,20 @@ public class Klaviyo : NSObject {
     let urlSessionMaxConnection = 5
     var showNetworkActivityIndicator : Bool = true
     
+    private var isCheckingForInAppMessages: Bool = false
+    private var newNotification: KlaviyoNotification?
+    
     /*
-    Computed property for iOSIDString
-    :returns: A unique string that represents the device using the application
-    */
+     Computed property for iOSIDString
+     :returns: A unique string that represents the device using the application
+     */
     var iOSIDString : String {
         return "iOS:" + UIDevice.currentDevice().identifierForVendor!.UUIDString
     }
     
     /*
-    Singleton Initializer. Must be kept private as only one instance can be created.
-    */
+     Singleton Initializer. Must be kept private as only one instance can be created.
+     */
     private override init() {
         super.init()
         
@@ -151,11 +152,6 @@ public class Klaviyo : NSObject {
         /* Save to nsuser defaults */
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setValue(userEmail, forKey: KLEmailNSDefaultsKey)
-        
-        /* Identify the user in Klaviyo */
-        let dictionary = NSMutableDictionary()
-        dictionary[KLPersonEmailDictKey] = userEmail
-        trackPersonWithInfo(dictionary)
     }
     
     
@@ -175,12 +171,57 @@ public class Klaviyo : NSObject {
      - Parameter userInfo: NSDictionary containing the push notification text & metadata
      */
     public func handlePush(userInfo: [NSObject: AnyObject]) {
+        guard let hasDeepLink = userInfo["_dl"] as? String, let isURL = NSURL(string: hasDeepLink) else {
+            return
+        }
+        
+        if UIApplication.sharedApplication().canOpenURL(isURL) {
+            UIApplication.sharedApplication().openURL(isURL)
+        }
+        
         if let metadata = userInfo["_k"] as? [NSObject: AnyObject] {
             // Track the push open
             trackEvent(KLPersonOpenedPush, properties: metadata)
+            
+            print("handling push: \(userInfo)")
+            // If user included a valid deep link, open it
+            print("user info \(userInfo)")
+            guard let hasDeepLink = userInfo["_dl"] as? String, let isURL = NSURL(string: hasDeepLink) else {
+                return
+            }
+            
+            print("has a deep link: \(isURL)")
+            if UIApplication.sharedApplication().canOpenURL(isURL) {
+                dispatch_async(dispatch_get_main_queue(), {
+                    UIApplication.sharedApplication().openURL(isURL)
+                })
+            }
+            
         } else {
             trackEvent(KLPersonOpenedPush, properties: userInfo)
         }
+    }
+    
+    func topPresentedViewController() -> UIViewController? {
+        var topController: UIViewController
+        guard let controller = UIApplication.sharedApplication().keyWindow?.rootViewController else {
+            return nil
+        }
+        topController = controller
+        while((controller.presentedViewController) != nil) {
+            topController = controller.presentedViewController!
+        }
+        return topController
+    }
+    
+    func canPresentFromViewController(vc:  UIViewController) -> Bool {
+        if vc.isBeingDismissed() || vc.isBeingPresented() {
+            return false
+        }
+        if vc.isKindOfClass(UIAlertController) {
+            return false
+        }
+        return true
     }
     
     /**
@@ -280,6 +321,17 @@ public class Klaviyo : NSObject {
         return (self.userEmail.characters.count > 0) ?? false
     }
     
+    /*
+     getEmailAdress: executed internally, and only after checking if email address exists
+     */
+    private func getEmailAddress() -> String {
+        if emailAddressExists() {
+            return self.userEmail
+        } else if let savedEmail = NSUserDefaults.standardUserDefaults().valueForKey(KLEmailNSDefaultsKey) as? String{
+            return savedEmail
+        }
+        return ""
+    }
     
     /**
      trackPersonWithInfo: method that creates a Klaviyo person tracking instance that is separate from an event
@@ -335,7 +387,7 @@ public class Klaviyo : NSObject {
         let cleanToken = trimEnds.stringByReplacingOccurrencesOfString(" ", withString: "")
         
         apnDeviceToken = cleanToken
-
+        
         if apnDeviceToken != nil {
             let personInfoDictionary : NSMutableDictionary = NSMutableDictionary()
             personInfoDictionary[CustomerPropertiesAppendDictKey] = [CustomerPropertiesAPNTokensDictKey: apnDeviceToken!]
@@ -450,6 +502,18 @@ public class Klaviyo : NSObject {
     
     func applicationDidBecomeActiveNotification(notification: NSNotification) {
         reachability?.startNotifier()
+        
+        /* 7/16: New Feature - checks for in app messages, if there is one, show it */
+        checkForInAppMessages { result in
+            if result && self.newNotification != nil {
+                
+                if self.newNotification!.type == NotificationStyle.MiniScreen {
+                    self.showMiniNotification()
+                } else {
+                    self.showFullScreenNotification()
+                }
+            }
+        }
     }
     
     func applicationDidEnterBackgroundNotification(notification: NSNotification){
@@ -460,14 +524,197 @@ public class Klaviyo : NSObject {
         archive()
     }
     
+    /*
+     New Feature: 07/16: In-App Messages
+     */
+    func checkForInAppMessages(completionHandler: (result: Bool) -> Void)  {
+        /* Make sure the app is not already querying for the data */
+        if isCheckingForInAppMessages {
+            completionHandler(result: false)
+            return
+        }
+        
+        isCheckingForInAppMessages = true
+        
+        let urlString = "https://f8610b45.ngrok.io/mobile/in-app-messages/recent?"
+        
+        var fullURL = urlString
+        
+        // add company information to the params
+        
+        // add customer information to the params
+        if let email = getEmailAddress().stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+            fullURL += "email=" + email + "&"
+        }
+        if let anonymous = iOSIDString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+            fullURL += "anonymous=" + anonymous
+        }
+        
+        var requestSuccess: Bool = false
+        
+        guard let session = urlSession, let url = NSURL(string: fullURL) else {
+            completionHandler(result: false)
+            return
+        }
+        
+        let request = NSMutableURLRequest(URL: url)
+        request.setValue("gzip", forHTTPHeaderField: "Accept-Encoding")
+        request.HTTPMethod = "GET"
+        
+        /* Optional, but good practice to alert the user that data is being retrieved in the status bar */
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
+        /* Check for any in-app messages */
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request) { data, response, error in
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            }
+            
+            if let _ = error {
+                requestSuccess = false
+            } else if let httpResponse = response as? NSHTTPURLResponse, let hasData = data where httpResponse.statusCode == 200 {
+                
+                do {
+                    // Serialize the returned data into JSON
+                    guard let json = try NSJSONSerialization.JSONObjectWithData(hasData, options: NSJSONReadingOptions.MutableContainers) as? [String: AnyObject], let jsonData = json["data"] as? [String : [AnyObject]],
+                        let notifications = jsonData["notifications"] else {
+                            completionHandler(result: false)
+                            return
+                    }
+                    
+                    if notifications.isEmpty || notifications.count == 0 {
+                        completionHandler(result: false)
+                        return
+                    }
+                    
+                    let first = notifications[0]
+                    
+                    if first is [String: AnyObject] {
+                        let notification = KlaviyoNotification(json: (first as? [String: AnyObject])!)
+                        self.newNotification = notification
+                        requestSuccess = true
+                        completionHandler(result: true)
+                        return
+                    }
+                } catch {
+                    // this means our server returned invalid json
+                    requestSuccess = false
+                }
+                
+            }
+            self.isCheckingForInAppMessages = false
+        }
+        
+        task.resume()
+        completionHandler(result: requestSuccess)
+    }
+    
+    func showMiniNotification() {
+        
+        guard let notification = newNotification, let presentingVC = topPresentedViewController() where
+            !canPresentFromViewController(presentingVC) else {
+                return
+        }
+        
+        // Create the mini view controller
+        let miniVC = KlaviyoNotificationMiniViewController()
+        
+        // Set the notification
+        miniVC.notification = notification
+        miniVC.delegate = self
+        
+        // Animate the view, wait for certain amount of time, then dismiss the view
+        // This has to be done on the main thread, otherwise it risks crashing the app
+        dispatch_async(dispatch_get_main_queue()) {
+            miniVC.animateView()
+            
+            // Animate the view out after 4 seconds
+            let wait = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 4 * Int64(NSEC_PER_SEC))
+            dispatch_after(wait, dispatch_get_main_queue()) {
+                if !miniVC.isCurrentlyBeingDismissed {
+                    miniVC.dismissAnimation(0.3)
+                }
+            }
+        }
+    }
+    
+    /*
+     This function grabs the current view controller and creates the full screen notification
+     */
+    func showFullScreenNotification() {
+        print("showing full screen notification")
+        guard let presentingVC = topPresentedViewController(), let showNotification = newNotification
+            where canPresentFromViewController(presentingVC) else {
+                print("returning")
+                return
+        }
+        
+        let storyboard = KlaviyoNotification.klaviyoNotificationStoryboard(showNotification.hasActionButton, styleType: showNotification.type)
+        
+        guard let klaviyoNotificationController = storyboard.instantiateViewControllerWithIdentifier("klaviyoNotificationVC") as? KlaviyoNotificationViewController else {
+            print("failed to instantiate vc")
+            return
+        }
+        
+        // set the notification & the delegate
+        klaviyoNotificationController.notification = showNotification
+        klaviyoNotificationController.delegate = self
+        print("showing to user")
+        // present the notification
+        presentingVC.modalPresentationStyle = .OverCurrentContext
+        klaviyoNotificationController.modalPresentationStyle = .OverCurrentContext
+        presentingVC.presentViewController(klaviyoNotificationController, animated: true, completion: nil)
+    }
+    
+    func didDismissNotificationViewControllerWithAction(sender: KlaviyoNotificationViewController?) -> Bool {
+        /* Sanity check that sender and notification exist and unwrap optionals */
+        if sender == nil || (newNotification == nil && sender?.notification == nil) ||
+            sender?.notification.actionButton?.deepLink == nil {
+            sender?.dismiss()
+            return false
+        }
+        
+        if let urlString = sender?.notification.actionButton?.deepLink, let url = NSURL(string: urlString) {
+            if UIApplication.sharedApplication().canOpenURL(url) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
+        
+        sender?.dismiss()
+        return true
+    }
+    
+    /*
+     func didDismissNotificationViewController(sender: KlaviyoNotificationViewController) -> Bool
+     
+     */
+    func didDismissNotificationViewController(sender: KlaviyoNotificationViewController?) -> Bool {
+        // if the sender is nil or notification does not exist, there is nothing to dismiss
+        if sender == nil || (newNotification == nil  || sender?.notification == nil) {
+            return false
+        }
+        
+        
+        //isShowingNotification = false
+        newNotification = nil
+        
+        // if the user selected the call to action, then take the user there
+        
+        // else, close the animation
+        print("dismissing normally")
+        sender?.dismiss()
+        return true
+    }
+    
     //: Persistence Functionality
     
     /**
-    filePathForData: returns a string representing the filepath where archived event queues are stored
-    
-    - Parameter data: name representing the event queue to locate (will be either people or events)
-    - Returns: filePath string representing the file location
-    */
+     filePathForData: returns a string representing the filepath where archived event queues are stored
+     
+     - Parameter data: name representing the event queue to locate (will be either people or events)
+     - Returns: filePath string representing the file location
+     */
     private func filePathForData(data: String)->String {
         let fileName = "/klaviyo-\(apiKey!)-\(data).plist"
         let directory = NSSearchPathForDirectoriesInDomains(.LibraryDirectory, .UserDomainMask, true).last
@@ -485,18 +732,18 @@ public class Klaviyo : NSObject {
     }
     
     /*
-    archiveEvents: copies the event queue and archives it to the appropriate directory location
-    */
+     archiveEvents: copies the event queue and archives it to the appropriate directory location
+     */
     private func archiveEvents() {
         let filePath = eventsFilePath()
         let eventsQueueCopy = eventsQueue!
         if !NSKeyedArchiver.archiveRootObject(eventsQueueCopy, toFile: filePath) {
-            print("unable to archive the events data")
+            /* TBA: log this error */
         }
     }
     /*
-    archivePeople: copies the people queue and archives it to the appropriate directory location
-    */
+     archivePeople: copies the people queue and archives it to the appropriate directory location
+     */
     private func archivePeople() {
         let filePath = peopleFilePath()
         let peopleQueueCopy : NSMutableArray = peopleQueue!
@@ -564,8 +811,8 @@ public class Klaviyo : NSObject {
     //: MARK: Network Control
     
     /*
-    Internal function that initiates the flushing of data
-    */
+     Internal function that initiates the flushing of data
+     */
     private func flush() {
         
         flushEvents()
@@ -663,10 +910,10 @@ public class Klaviyo : NSObject {
     // :MARK- Encoding & Decoding functions
     
     /**
-    encodeAPIParamData: Internal function that encodes API dictionary data to base64 and returns a string
-    - Parameter dict: an NSDictionary representing the data to be encoded for a given event
-    - Returns: an encoded string
-    */
+     encodeAPIParamData: Internal function that encodes API dictionary data to base64 and returns a string
+     - Parameter dict: an NSDictionary representing the data to be encoded for a given event
+     - Returns: an encoded string
+     */
     private func encodeAPIParamData(dict: NSDictionary)->String {
         var b64String = ""
         let data : NSData? = JSONSerializeObject(dict)

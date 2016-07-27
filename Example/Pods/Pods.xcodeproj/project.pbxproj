@@ -10,6 +10,15 @@
 		186A136B6751AB8FDBE16D2792A29247 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33E1636320663B4108D2B2D97D472D8 /* Foundation.framework */; };
 		1CA69E689B27A8720E964A31667E0CB5 /* Pods-KlaviyoSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AFD57F7491458E5F2DA4D3D241106E /* Pods-KlaviyoSwift_Tests-dummy.m */; };
 		23C9E7FEE80F8BF44DC59B7B1FD9560C /* Klaviyo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D5F1540556E06822F74CD7EC209DF /* Klaviyo.swift */; };
+		2EECF9671D48048E00D099E7 /* KlaviyoNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EECF95E1D48048E00D099E7 /* KlaviyoNotification.swift */; };
+		2EECF9681D48048E00D099E7 /* KlaviyoNotificationElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EECF95F1D48048E00D099E7 /* KlaviyoNotificationElements.swift */; };
+		2EECF9691D48048E00D099E7 /* KlaviyoNotificationMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EECF9601D48048E00D099E7 /* KlaviyoNotificationMapping.swift */; };
+		2EECF96A1D48048E00D099E7 /* KlaviyoNotificationMiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EECF9611D48048E00D099E7 /* KlaviyoNotificationMiniViewController.swift */; };
+		2EECF96B1D48048E00D099E7 /* KlaviyoNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EECF9621D48048E00D099E7 /* KlaviyoNotificationViewController.swift */; };
+		2EECF96C1D48048E00D099E7 /* KlaviyoNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EECF9631D48048E00D099E7 /* KlaviyoNotification.storyboard */; };
+		2EECF96D1D48048E00D099E7 /* KlaviyoNotificationWButton.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EECF9641D48048E00D099E7 /* KlaviyoNotificationWButton.storyboard */; };
+		2EECF96E1D48048E00D099E7 /* KlaviyoNotificationButtonMidSize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EECF9651D48048E00D099E7 /* KlaviyoNotificationButtonMidSize.storyboard */; };
+		2EECF96F1D48048E00D099E7 /* KlaviyoNotificationMidSize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EECF9661D48048E00D099E7 /* KlaviyoNotificationMidSize.storyboard */; };
 		320778CE74B237A56500248DDFDFE882 /* KlaviyoSwift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 560507DE27FC9E88CC8AA880717E3796 /* KlaviyoSwift.bundle */; };
 		349657BCE10F654AB12DE9F4B76B720E /* Pods-KlaviyoSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40815CFCE522D8C9960C92A2B02DE237 /* Pods-KlaviyoSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41A44B02A7B931AD69007B62ED883B03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33E1636320663B4108D2B2D97D472D8 /* Foundation.framework */; };
@@ -51,6 +60,15 @@
 		0C5BD688B562CDF27F0F28284952EFF5 /* Pods-KlaviyoSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KlaviyoSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		16BEED120CBDC5A181DEED11C3F8B0A3 /* KlaviyoSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KlaviyoSwift-dummy.m"; sourceTree = "<group>"; };
 		2E8759500B230FCAC8B262D78DC48E11 /* Pods_KlaviyoSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KlaviyoSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EECF95E1D48048E00D099E7 /* KlaviyoNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlaviyoNotification.swift; sourceTree = "<group>"; };
+		2EECF95F1D48048E00D099E7 /* KlaviyoNotificationElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlaviyoNotificationElements.swift; sourceTree = "<group>"; };
+		2EECF9601D48048E00D099E7 /* KlaviyoNotificationMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlaviyoNotificationMapping.swift; sourceTree = "<group>"; };
+		2EECF9611D48048E00D099E7 /* KlaviyoNotificationMiniViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlaviyoNotificationMiniViewController.swift; sourceTree = "<group>"; };
+		2EECF9621D48048E00D099E7 /* KlaviyoNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlaviyoNotificationViewController.swift; sourceTree = "<group>"; };
+		2EECF9631D48048E00D099E7 /* KlaviyoNotification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KlaviyoNotification.storyboard; sourceTree = "<group>"; };
+		2EECF9641D48048E00D099E7 /* KlaviyoNotificationWButton.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KlaviyoNotificationWButton.storyboard; sourceTree = "<group>"; };
+		2EECF9651D48048E00D099E7 /* KlaviyoNotificationButtonMidSize.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KlaviyoNotificationButtonMidSize.storyboard; sourceTree = "<group>"; };
+		2EECF9661D48048E00D099E7 /* KlaviyoNotificationMidSize.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KlaviyoNotificationMidSize.storyboard; sourceTree = "<group>"; };
 		306D8838F3E452CFB477ED86364AD8EF /* Pods-KlaviyoSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KlaviyoSwift_Example.modulemap"; sourceTree = "<group>"; };
 		40815CFCE522D8C9960C92A2B02DE237 /* Pods-KlaviyoSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KlaviyoSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		41106B1050037E1B5BA264A8E415D398 /* KlaviyoSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KlaviyoSwift-prefix.pch"; sourceTree = "<group>"; };
@@ -235,6 +253,15 @@
 		F2CB3C15238CFA500534DDB7D32BA8E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2EECF95E1D48048E00D099E7 /* KlaviyoNotification.swift */,
+				2EECF95F1D48048E00D099E7 /* KlaviyoNotificationElements.swift */,
+				2EECF9601D48048E00D099E7 /* KlaviyoNotificationMapping.swift */,
+				2EECF9611D48048E00D099E7 /* KlaviyoNotificationMiniViewController.swift */,
+				2EECF9621D48048E00D099E7 /* KlaviyoNotificationViewController.swift */,
+				2EECF9631D48048E00D099E7 /* KlaviyoNotification.storyboard */,
+				2EECF9641D48048E00D099E7 /* KlaviyoNotificationWButton.storyboard */,
+				2EECF9651D48048E00D099E7 /* KlaviyoNotificationButtonMidSize.storyboard */,
+				2EECF9661D48048E00D099E7 /* KlaviyoNotificationMidSize.storyboard */,
 				E81D5F1540556E06822F74CD7EC209DF /* Klaviyo.swift */,
 				8CACFB27278F531B8E807F5103AFA52F /* ReachabilitySwift.swift */,
 			);
@@ -394,7 +421,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EECF96D1D48048E00D099E7 /* KlaviyoNotificationWButton.storyboard in Resources */,
+				2EECF96E1D48048E00D099E7 /* KlaviyoNotificationButtonMidSize.storyboard in Resources */,
 				320778CE74B237A56500248DDFDFE882 /* KlaviyoSwift.bundle in Resources */,
+				2EECF96C1D48048E00D099E7 /* KlaviyoNotification.storyboard in Resources */,
+				2EECF96F1D48048E00D099E7 /* KlaviyoNotificationMidSize.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,9 +451,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EECF9691D48048E00D099E7 /* KlaviyoNotificationMapping.swift in Sources */,
 				23C9E7FEE80F8BF44DC59B7B1FD9560C /* Klaviyo.swift in Sources */,
 				F01DC9E0DBB5C949C88611FAD521D593 /* KlaviyoSwift-dummy.m in Sources */,
+				2EECF96A1D48048E00D099E7 /* KlaviyoNotificationMiniViewController.swift in Sources */,
+				2EECF9681D48048E00D099E7 /* KlaviyoNotificationElements.swift in Sources */,
+				2EECF9671D48048E00D099E7 /* KlaviyoNotification.swift in Sources */,
 				9DA092609E7E84214798F43564AB6232 /* ReachabilitySwift.swift in Sources */,
+				2EECF96B1D48048E00D099E7 /* KlaviyoNotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

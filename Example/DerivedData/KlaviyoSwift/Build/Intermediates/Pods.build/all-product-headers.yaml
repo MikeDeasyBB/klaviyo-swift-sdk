@@ -4,12 +4,12 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphonesimulator/KlaviyoSwift.framework/Headers",
+      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphoneos/KlaviyoSwift.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "KlaviyoSwift-Swift.h",
-          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphonesimulator/KlaviyoSwift.framework/Headers/KlaviyoSwift-Swift.h"
+          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphoneos/KlaviyoSwift.framework/Headers/KlaviyoSwift-Swift.h"
         },
         {
           'type': 'file',
@@ -20,18 +20,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphonesimulator/KlaviyoSwift.framework/Modules",
+      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphoneos/KlaviyoSwift.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Intermediates/Pods.build/Debug-iphonesimulator/KlaviyoSwift.build/module.modulemap"
+          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Intermediates/Pods.build/Debug-iphoneos/KlaviyoSwift.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphonesimulator/Pods_KlaviyoSwift_Example.framework/Headers",
+      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphoneos/Pods_KlaviyoSwift_Example.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -41,24 +41,24 @@
         {
           'type': 'file',
           'name': "Pods_KlaviyoSwift_Example-Swift.h",
-          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphonesimulator/Pods_KlaviyoSwift_Example.framework/Headers/Pods_KlaviyoSwift_Example-Swift.h"
+          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphoneos/Pods_KlaviyoSwift_Example.framework/Headers/Pods_KlaviyoSwift_Example-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphonesimulator/Pods_KlaviyoSwift_Example.framework/Modules",
+      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphoneos/Pods_KlaviyoSwift_Example.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-KlaviyoSwift_Example.build/module.modulemap"
+          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-KlaviyoSwift_Example.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphonesimulator/Pods_KlaviyoSwift_Tests.framework/Headers",
+      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphoneos/Pods_KlaviyoSwift_Tests.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -68,18 +68,18 @@
         {
           'type': 'file',
           'name': "Pods_KlaviyoSwift_Tests-Swift.h",
-          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphonesimulator/Pods_KlaviyoSwift_Tests.framework/Headers/Pods_KlaviyoSwift_Tests-Swift.h"
+          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphoneos/Pods_KlaviyoSwift_Tests.framework/Headers/Pods_KlaviyoSwift_Tests-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphonesimulator/Pods_KlaviyoSwift_Tests.framework/Modules",
+      'name': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Products/Debug-iphoneos/Pods_KlaviyoSwift_Tests.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-KlaviyoSwift_Tests.build/module.modulemap"
+          'external-contents': "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-KlaviyoSwift_Tests.build/module.modulemap"
         }
       ]
     }

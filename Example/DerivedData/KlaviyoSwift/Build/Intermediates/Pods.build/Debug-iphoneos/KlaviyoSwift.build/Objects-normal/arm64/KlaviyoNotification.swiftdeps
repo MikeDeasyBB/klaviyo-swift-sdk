@@ -1,0 +1,362 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "KlaviyoNotification"
+- "NotificationStyle"
+provides-nominal:
+- "V12KlaviyoSwift19KlaviyoNotification"
+- "O12KlaviyoSwift17NotificationStyle"
+provides-member:
+- ["V12KlaviyoSwift19KlaviyoNotification", ""]
+- ["O12KlaviyoSwift17NotificationStyle", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "KLNImage"
+- !private "UIApplication"
+- !private "KLNTitle"
+- !private "UIUserInterfaceIdiom"
+- "=="
+- !private "~="
+- !private "KLNDirection"
+- "KlaviyoButton"
+- "StringLiteralType"
+- "AnyObject"
+- !private "UIInterfaceOrientationIsLandscape"
+- "UIStoryboard"
+- "NotificationStyle"
+- "KlaviyoStyle"
+- !private "!="
+- !private "KLNBody"
+- !private "NSBundle"
+- "Bool"
+- !private "KLNotificationType"
+- "String"
+- !private "KLNDefaultTheme"
+- !private "UIDevice"
+- !private "KLNActionButton"
+- "KlaviyoNotificationImage"
+- "KlaviyoNotification"
+- !private "klaviyoNotificationID"
+- !private "KLNStyle"
+- "BooleanLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "currentDevice"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "lowercaseString"]
+- !private ["Ps9AnyObject", "sharedApplication"]
+- !private ["Ps9AnyObject", "statusBarOrientation"]
+- !private ["Ps9AnyObject", "userInterfaceIdiom"]
+- !private ["Ps22BidirectionalIndexType", "hashValue"]
+- !private ["Ps21BitwiseOperationsType", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "currentDevice"]
+- !private ["Ps11CVarArgType", "hashValue"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "lowercaseString"]
+- !private ["Ps11CVarArgType", "sharedApplication"]
+- !private ["Ps11CVarArgType", "statusBarOrientation"]
+- !private ["Ps11CVarArgType", "userInterfaceIdiom"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps10Comparable", "hashValue"]
+- !private ["Ps10Comparable", "lowercaseString"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "currentDevice"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "lowercaseString"]
+- !private ["Ps28CustomDebugStringConvertible", "sharedApplication"]
+- !private ["Ps28CustomDebugStringConvertible", "statusBarOrientation"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "userInterfaceIdiom"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "currentDevice"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "lowercaseString"]
+- !private ["Ps23CustomStringConvertible", "sharedApplication"]
+- !private ["Ps23CustomStringConvertible", "statusBarOrientation"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "userInterfaceIdiom"]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Ps9Equatable", "Dark"]
+- !private ["Ps9Equatable", "FullScreen"]
+- !private ["Ps9Equatable", "MidScreen"]
+- !private ["Ps9Equatable", "MiniScreen"]
+- !private ["Ps9Equatable", "Phone"]
+- ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "currentDevice"]
+- ["Ps9Equatable", "hashValue"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "lowercaseString"]
+- ["Ps9Equatable", "rawValue"]
+- !private ["Ps9Equatable", "sharedApplication"]
+- !private ["Ps9Equatable", "statusBarOrientation"]
+- !private ["Ps9Equatable", "userInterfaceIdiom"]
+- ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "lowercaseString"]
+- !private ["Ps16ForwardIndexType", "hashValue"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Dark"]
+- !private ["Ps8Hashable", "FullScreen"]
+- !private ["Ps8Hashable", "MidScreen"]
+- !private ["Ps8Hashable", "MiniScreen"]
+- !private ["Ps8Hashable", "Phone"]
+- ["Ps8Hashable", "RawValue"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "currentDevice"]
+- ["Ps8Hashable", "hashValue"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "lowercaseString"]
+- ["Ps8Hashable", "rawValue"]
+- !private ["Ps8Hashable", "sharedApplication"]
+- !private ["Ps8Hashable", "statusBarOrientation"]
+- !private ["Ps8Hashable", "userInterfaceIdiom"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "hashValue"]
+- !private ["Ps21IntegerArithmeticType", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
+- !private ["Ps11IntegerType", "hashValue"]
+- !private ["C12KlaviyoSwift13KlaviyoButton", "init"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "AnyObject"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "Bool"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "KLNActionButton"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "KLNBody"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "KLNDefaultTheme"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "KLNDirection"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "KLNImage"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "KLNStyle"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "KLNTitle"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "KLNotificationType"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "KlaviyoButton"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "KlaviyoNotificationImage"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "KlaviyoStyle"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "NSBundle"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "NotificationStyle"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "String"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "UIApplication"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "UIDevice"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "UIInterfaceOrientationIsLandscape"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "UIStoryboard"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "UIUserInterfaceIdiom"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "actionButton"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "body"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "defaultTheme"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "direction"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "hasActionButton"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "hasCustomStyling"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "id"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "image"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "init"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "isValidNotification"]
+- !private ["V12KlaviyoSwift19KlaviyoNotification", "klaviyoNotificationID"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "klaviyoNotificationStoryboard"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "style"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "title"]
+- ["V12KlaviyoSwift19KlaviyoNotification", "type"]
+- !private ["C12KlaviyoSwift24KlaviyoNotificationImage", "init"]
+- !private ["C12KlaviyoSwift12KlaviyoStyle", "init"]
+- !private ["O12KlaviyoSwift12KlaviyoTheme", "Dark"]
+- !private ["Ps14MirrorPathType", "hashValue"]
+- !private ["Ps14MirrorPathType", "lowercaseString"]
+- !private ["CSo8NSBundle", "init"]
+- !private ["PSo8NSCoding", "lowercaseString"]
+- !private ["PSo9NSCopying", "lowercaseString"]
+- !private ["PSo16NSMutableCopying", "lowercaseString"]
+- !private ["CSo8NSObject", "currentDevice"]
+- !private ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "lowercaseString"]
+- !private ["CSo8NSObject", "sharedApplication"]
+- !private ["CSo8NSObject", "statusBarOrientation"]
+- !private ["CSo8NSObject", "userInterfaceIdiom"]
+- !private ["PSo16NSObjectProtocol", "currentDevice"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "lowercaseString"]
+- !private ["PSo16NSObjectProtocol", "sharedApplication"]
+- !private ["PSo16NSObjectProtocol", "statusBarOrientation"]
+- !private ["PSo16NSObjectProtocol", "userInterfaceIdiom"]
+- !private ["PSo14NSSecureCoding", "lowercaseString"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "lowercaseString"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["O12KlaviyoSwift17NotificationStyle", "FullScreen"]
+- ["O12KlaviyoSwift17NotificationStyle", "MidScreen"]
+- ["O12KlaviyoSwift17NotificationStyle", "MiniScreen"]
+- ["O12KlaviyoSwift17NotificationStyle", "RawValue"]
+- ["O12KlaviyoSwift17NotificationStyle", "String"]
+- ["O12KlaviyoSwift17NotificationStyle", "deinit"]
+- ["O12KlaviyoSwift17NotificationStyle", "hashValue"]
+- ["O12KlaviyoSwift17NotificationStyle", "init"]
+- ["O12KlaviyoSwift17NotificationStyle", "rawValue"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "lowercaseString"]
+- !private ["Ps21RandomAccessIndexType", "hashValue"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps16RawRepresentable", "Dark"]
+- !private ["Ps16RawRepresentable", "FullScreen"]
+- !private ["Ps16RawRepresentable", "MidScreen"]
+- !private ["Ps16RawRepresentable", "MiniScreen"]
+- !private ["Ps16RawRepresentable", "Phone"]
+- ["Ps16RawRepresentable", "RawValue"]
+- ["Ps16RawRepresentable", "hashValue"]
+- ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "rawValue"]
+- ["Ps16RawRepresentable", ""]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Ps17SignedIntegerType", "hashValue"]
+- !private ["Ps16SignedNumberType", "hashValue"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Ps10Streamable", "lowercaseString"]
+- !private ["Ps10Strideable", "hashValue"]
+- ["SS", "deinit"]
+- !private ["SS", "lowercaseString"]
+- !private ["Ps30StringInterpolationConvertible", "lowercaseString"]
+- !private ["Ps24StringLiteralConvertible", "lowercaseString"]
+- !private ["CSo13UIApplication", "sharedApplication"]
+- !private ["CSo13UIApplication", "statusBarOrientation"]
+- !private ["CSo8UIDevice", "currentDevice"]
+- !private ["CSo8UIDevice", "userInterfaceIdiom"]
+- !private ["CSo11UIResponder", "sharedApplication"]
+- !private ["CSo11UIResponder", "statusBarOrientation"]
+- !private ["CSo12UIStoryboard", "init"]
+- !private ["OSC20UIUserInterfaceIdiom", "Phone"]
+- !private ["OSC20UIUserInterfaceIdiom", "RawValue"]
+- !private ["OSC20UIUserInterfaceIdiom", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "lowercaseString"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "lowercaseString"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "lowercaseString"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "lowercaseString"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "lowercaseString"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps22_IntegerArithmeticType", "hashValue"]
+- !private ["Ps12_IntegerType", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "lowercaseString"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "hashValue"]
+- !private ["Ps12_Reflectable", "Index"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "hashValue"]
+- !private ["Ps12_Reflectable", "lowercaseString"]
+- !private ["Ps12_Reflectable", "subscript"]
+- !private ["Ps18_SignedIntegerType", "hashValue"]
+depends-nominal:
+- !private "Ps9AnyObject"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "C12KlaviyoSwift13KlaviyoButton"
+- "V12KlaviyoSwift19KlaviyoNotification"
+- !private "C12KlaviyoSwift24KlaviyoNotificationImage"
+- !private "C12KlaviyoSwift12KlaviyoStyle"
+- !private "O12KlaviyoSwift12KlaviyoTheme"
+- !private "Ps14MirrorPathType"
+- !private "CSo8NSBundle"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Ps21NilLiteralConvertible"
+- "O12KlaviyoSwift17NotificationStyle"
+- "Sq"
+- !private "Ps16OutputStreamType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Vs5Range"
+- "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Vs5Slice"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
+- "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "CSo13UIApplication"
+- !private "CSo8UIDevice"
+- !private "CSo11UIResponder"
+- !private "CSo12UIStoryboard"
+- !private "OSC20UIUserInterfaceIdiom"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/Pods/Target Support Files/KlaviyoSwift/KlaviyoSwift-umbrella.h"
+- "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Intermediates/Pods.build/Debug-iphoneos/KlaviyoSwift.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+interface-hash: "a9113c24a5a6d76efc444f0cbfbcc6ab"
