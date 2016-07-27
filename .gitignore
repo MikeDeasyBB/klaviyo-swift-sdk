@@ -54,3 +54,8 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+# ignore all pem files
+.pem
+.p12
+.pkey
