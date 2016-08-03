@@ -7,15 +7,15 @@ provides-member:
 - ["C20KlaviyoSwift_Example4User", ""]
 provides-dynamic-lookup:
 - "email"
-- "lastName"
 - "zipcode"
 - "firstName"
+- "lastName"
 depends-top-level:
-- "NSObject"
-- "String"
 - "User"
-- "MenuItem"
+- "String"
 - "Bool"
+- "NSObject"
+- "MenuItem"
 depends-member:
 - ["Ps9AnyObject", "cart"]
 - ["Ps9AnyObject", "email"]

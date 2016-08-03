@@ -1,11 +1,11 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
 options: "b20161026a84bf1e795e1a80a297c2ac"
-build_time: [522958338, 537277000]
+build_time: [523544399, 958952000]
 inputs:
-  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotificationMapping.swift": [9223372036854775807, 0]
-  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/Klaviyo.swift": [522958335, 0]
-  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotificationMiniViewController.swift": [9223372036854775807, 0]
-  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotificationElements.swift": [9223372036854775807, 0]
-  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotification.swift": [9223372036854775807, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotificationMapping.swift": [522873916, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/Klaviyo.swift": [523544358, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotificationMiniViewController.swift": [522791618, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotificationElements.swift": [522878455, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotification.swift": [522957686, 0]
   "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/ReachabilitySwift.swift": [495819453, 0]
-  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotificationViewController.swift": [9223372036854775807, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Pod/Classes/KlaviyoNotificationViewController.swift": [522790990, 0]

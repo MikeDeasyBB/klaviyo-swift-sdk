@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/KlaviyoSwift.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		cSpFx0zFC7piOu8wCMaEaxgX4qk=
+		wKI8Gec1Ixa4D7lVUd3tyuH+kNQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -248,11 +248,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cSpFx0zFC7piOu8wCMaEaxgX4qk=
+			wKI8Gec1Ixa4D7lVUd3tyuH+kNQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Dl082bC6JmYMGcEKsbsnkEmwjPdX3R56jqSCz6cNWOw=
+			5TnsL+bnZRtmSR/Juy+aPm5z4dWhsxlhXkuy27BnIbs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

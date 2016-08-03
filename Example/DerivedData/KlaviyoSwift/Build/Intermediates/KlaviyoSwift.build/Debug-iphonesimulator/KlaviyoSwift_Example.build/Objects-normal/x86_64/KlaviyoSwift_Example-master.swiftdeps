@@ -1,0 +1,13 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "1309f41fccfa38cc8d0e01380e64fd67"
+build_time: [523559643, 169021000]
+inputs:
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/MenuPageViewController.swift": [522958335, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/MenuItemTableViewCell.swift": [497026365, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/MenuItem.swift": [497025829, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/CheckOutViewController.swift": [523559641, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/Cart.swift": [522958335, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/CheckOutTableViewCell.swift": [497026365, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/ViewController.swift": [497380861, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/User.swift": [496936412, 0]
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/AppDelegate.swift": [522958335, 0]

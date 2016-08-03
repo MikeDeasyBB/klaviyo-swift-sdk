@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C20KlaviyoSwift_Example21MenuItemTableViewCell", ""]
 provides-dynamic-lookup:
+- "itemDescription"
 - "removeItemButton"
 - "itemImage"
-- "itemDescription"
 - "setSelected"
-- "itemPrice"
-- "addToCartButton"
-- "numberOfItemsLabel"
 - "awakeFromNib"
 - "itemName"
+- "numberOfItemsLabel"
+- "addToCartButton"
+- "itemPrice"
 depends-top-level:
-- "UIButton"
+- !private "CGRect"
 - "Bool"
+- "UIButton"
 - "MenuItemTableViewCell"
 - "UIImageView"
-- !private "CGRect"
-- "UITableViewCell"
 - "UILabel"
+- "UITableViewCell"
 - !private "StringLiteralType"
 - !private "UIImage"
 depends-member:

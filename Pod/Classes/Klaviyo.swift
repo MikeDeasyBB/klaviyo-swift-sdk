@@ -14,6 +14,13 @@ public class Klaviyo : NSObject, KlaviyoNotificationDelegate {
     /*
      Klaviyo Class Constants
      */
+    #if RELEASE_VERSION
+    let KlaviyoServerURLString = "https://a.klaviyo.com/api"
+    let inAppMessageServerString = "https://a.klaviyo.com/mobile/in-app-messages/recent?"
+    #else
+    let KlaviyoServerURLString = "https://b966dc7c.ngrok.io/api" // can use local-klaviyo if you are only testing on the simulator
+    let inAppMessageServerString = "https://b966dc7c.ngrok.io/mobile/in-app-messages/recent?"
+    #endif
     
     // Create the singleton instance
     public static let sharedInstance = Klaviyo()
@@ -43,7 +50,6 @@ public class Klaviyo : NSObject, KlaviyoNotificationDelegate {
     public let KLMessageDimension = "$message"
     
     // KL Definitions File: API URL Constants
-    let KlaviyoServerURLString = "https://f8610b45.ngrok.io/api"
     let KlaviyoServerTrackEventEndpoint = "/track"
     let KlaviyoServerTrackPersonEndpoint = "/identify"
     
@@ -101,6 +107,8 @@ public class Klaviyo : NSObject, KlaviyoNotificationDelegate {
     /*
      Computed property for iOSIDString
      :returns: A unique string that represents the device using the application
+     This is only unique for the lifetime of the application. If a user uninstalls and reinstalls the app this value will change
+     There is currently no way to identify devices across app installs
      */
     var iOSIDString : String {
         return "iOS:" + UIDevice.currentDevice().identifierForVendor!.UUIDString
@@ -126,7 +134,6 @@ public class Klaviyo : NSObject, KlaviyoNotificationDelegate {
         config.HTTPMaximumConnectionsPerHost = urlSessionMaxConnection
         urlSession = NSURLSession(configuration: config)
         reachability = Reachability(hostname: "www.klaviyo.com")
-        
     }
     
     /**
@@ -171,57 +178,26 @@ public class Klaviyo : NSObject, KlaviyoNotificationDelegate {
      - Parameter userInfo: NSDictionary containing the push notification text & metadata
      */
     public func handlePush(userInfo: [NSObject: AnyObject]) {
-        guard let hasDeepLink = userInfo["_dl"] as? String, let isURL = NSURL(string: hasDeepLink) else {
-            return
-        }
-        
-        if UIApplication.sharedApplication().canOpenURL(isURL) {
-            UIApplication.sharedApplication().openURL(isURL)
-        }
-        
         if let metadata = userInfo["_k"] as? [NSObject: AnyObject] {
+            if let hasDeepLink = userInfo["dl"] as? String {
+                handleDeepLink(hasDeepLink)
+            }
+            
             // Track the push open
             trackEvent(KLPersonOpenedPush, properties: metadata)
-            
-            print("handling push: \(userInfo)")
-            // If user included a valid deep link, open it
-            print("user info \(userInfo)")
-            guard let hasDeepLink = userInfo["_dl"] as? String, let isURL = NSURL(string: hasDeepLink) else {
-                return
-            }
-            
-            print("has a deep link: \(isURL)")
-            if UIApplication.sharedApplication().canOpenURL(isURL) {
-                dispatch_async(dispatch_get_main_queue(), {
-                    UIApplication.sharedApplication().openURL(isURL)
-                })
-            }
-            
         } else {
             trackEvent(KLPersonOpenedPush, properties: userInfo)
         }
     }
     
-    func topPresentedViewController() -> UIViewController? {
-        var topController: UIViewController
-        guard let controller = UIApplication.sharedApplication().keyWindow?.rootViewController else {
-            return nil
+    private func handleDeepLink(urlString: String) {
+        guard let url = NSURL(string: urlString) where UIApplication.sharedApplication().canOpenURL(url) else {
+            return
         }
-        topController = controller
-        while((controller.presentedViewController) != nil) {
-            topController = controller.presentedViewController!
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            UIApplication.sharedApplication().openURL(url)
         }
-        return topController
-    }
-    
-    func canPresentFromViewController(vc:  UIViewController) -> Bool {
-        if vc.isBeingDismissed() || vc.isBeingPresented() {
-            return false
-        }
-        if vc.isKindOfClass(UIAlertController) {
-            return false
-        }
-        return true
     }
     
     /**
@@ -536,19 +512,22 @@ public class Klaviyo : NSObject, KlaviyoNotificationDelegate {
         
         isCheckingForInAppMessages = true
         
-        let urlString = "https://f8610b45.ngrok.io/mobile/in-app-messages/recent?"
+        var fullURL = inAppMessageServerString
         
-        var fullURL = urlString
-        
-        // add company information to the params
-        
-        // add customer information to the params
-        if let email = getEmailAddress().stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+        // add customer information + company API Key to the params
+        if let email = getEmailAddress().stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+            where !email.isEmpty {
             fullURL += "email=" + email + "&"
         }
+        
         if let anonymous = iOSIDString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
-            fullURL += "anonymous=" + anonymous
+            fullURL += "anonymous=" + anonymous + "&"
         }
+        
+        if let key = apiKey {
+            fullURL += "id=" + key
+        }
+        
         
         var requestSuccess: Bool = false
         
@@ -699,11 +678,34 @@ public class Klaviyo : NSObject, KlaviyoNotificationDelegate {
         //isShowingNotification = false
         newNotification = nil
         
-        // if the user selected the call to action, then take the user there
+        // TBD: if deep linking if the user selected the call to action, then take the user there
         
         // else, close the animation
-        print("dismissing normally")
         sender?.dismiss()
+        return true
+    }
+    
+    /* Grabs the current view controller on the user's screen in order to present an in app message */
+    private func topPresentedViewController() -> UIViewController? {
+        var topController: UIViewController
+        guard let controller = UIApplication.sharedApplication().keyWindow?.rootViewController else {
+            return nil
+        }
+        topController = controller
+        while((controller.presentedViewController) != nil) {
+            topController = controller.presentedViewController!
+        }
+        return topController
+    }
+    
+    /* Checks that the status of the app will allow the user to present a message*/
+    private func canPresentFromViewController(vc:  UIViewController) -> Bool {
+        if vc.isBeingDismissed() || vc.isBeingPresented() {
+            return false
+        }
+        if vc.isKindOfClass(UIAlertController) {
+            return false
+        }
         return true
     }
     

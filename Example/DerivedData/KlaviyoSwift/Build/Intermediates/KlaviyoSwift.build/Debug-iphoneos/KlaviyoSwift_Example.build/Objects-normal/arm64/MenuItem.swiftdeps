@@ -8,15 +8,15 @@ provides-member:
 - ["C20KlaviyoSwift_Example8MenuItem", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "=="
-- "Double"
-- "IntegerLiteralType"
-- "MenuItem"
 - "Hashable"
+- "IntegerLiteralType"
+- "=="
+- "MenuItem"
 - "Bool"
 - "Int"
-- "FloatLiteralType"
+- "Double"
 - "String"
+- "FloatLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "description"]
 - ["Ps9AnyObject", "hashValue"]

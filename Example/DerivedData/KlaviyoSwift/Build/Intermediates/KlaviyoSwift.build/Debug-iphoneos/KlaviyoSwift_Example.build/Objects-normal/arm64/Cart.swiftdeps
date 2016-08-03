@@ -7,24 +7,24 @@ provides-member:
 - ["C20KlaviyoSwift_Example4Cart", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "Set"
-- !private "+="
-- "MenuItem"
-- "Cart"
-- "NSDictionary"
+- !private "??"
 - !private "*"
-- "Int"
-- !private "FloatLiteralType"
 - !private "=="
 - !private "~="
-- "Double"
-- "String"
 - !private "IntegerLiteralType"
-- !private "+"
-- !private "NSUserDefaults"
-- !private "??"
-- !private "Array"
 - !private "StringLiteralType"
+- !private "Set"
+- "Double"
+- "Cart"
+- "Int"
+- "MenuItem"
+- !private "NSUserDefaults"
+- !private "Array"
+- "NSDictionary"
+- "String"
+- !private "FloatLiteralType"
+- !private "+="
+- !private "+"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "Array"]

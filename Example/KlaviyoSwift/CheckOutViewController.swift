@@ -82,7 +82,7 @@ class CheckOutViewController: UIViewController, UITableViewDataSource, UITableVi
         
         for item in cart.cartItems {
             if item.name == menuItem.name {
-                numberOfItems++
+                numberOfItems += 1
             }
         }
         

@@ -6,20 +6,20 @@ provides-nominal:
 provides-member:
 - ["C20KlaviyoSwift_Example21CheckOutTableViewCell", ""]
 provides-dynamic-lookup:
-- "awakeFromNib"
-- "itemTotal"
-- "itemName"
-- "setSelected"
 - "itemQuantity"
+- "setSelected"
+- "awakeFromNib"
 - "itemImage"
 - "removeItemButton"
+- "itemTotal"
+- "itemName"
 depends-top-level:
-- "UIButton"
-- "UIImageView"
-- "Bool"
 - "UILabel"
-- "UITableViewCell"
+- "UIImageView"
 - "CheckOutTableViewCell"
+- "UITableViewCell"
+- "UIButton"
+- "Bool"
 depends-member:
 - ["Ps9AnyObject", "awakeFromNib"]
 - ["Ps9AnyObject", "init"]

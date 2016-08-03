@@ -6,16 +6,16 @@ provides-nominal:
 provides-member:
 - ["C18KlaviyoSwift_Tests5Tests", ""]
 provides-dynamic-lookup:
-- "setUp"
 - "testPerformanceExample"
-- "testExample"
+- "setUp"
 - "tearDown"
+- "testExample"
 depends-top-level:
 - "XCTestCase"
 - !private "XCTAssert"
 - !private "StringLiteralType"
-- !private "BooleanLiteralType"
 - "Tests"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "XCTAssert"]
 - ["Ps9AnyObject", "init"]

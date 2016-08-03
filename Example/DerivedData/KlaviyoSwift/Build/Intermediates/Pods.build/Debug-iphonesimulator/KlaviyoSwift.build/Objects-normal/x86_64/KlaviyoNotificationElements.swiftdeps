@@ -1,0 +1,557 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "KlaviyoNotificationImage"
+- "KlaviyoButton"
+- "KlaviyoStyle"
+- "KlaviyoTheme"
+- "KlaviyoBorder"
+provides-nominal:
+- "C12KlaviyoSwift24KlaviyoNotificationImage"
+- "C12KlaviyoSwift13KlaviyoButton"
+- "C12KlaviyoSwift12KlaviyoStyle"
+- "O12KlaviyoSwift12KlaviyoTheme"
+- "C12KlaviyoSwift13KlaviyoBorder"
+provides-member:
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", ""]
+- ["CSo7UIColor", ""]
+- ["C12KlaviyoSwift13KlaviyoButton", ""]
+- ["C12KlaviyoSwift12KlaviyoStyle", ""]
+- ["O12KlaviyoSwift12KlaviyoTheme", ""]
+- ["C12KlaviyoSwift13KlaviyoBorder", ""]
+- ["CSo7UIColor", "init"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "KLNImagePath"
+- "KlaviyoStyle"
+- !private "KLNOverlayColor"
+- "KlaviyoButton"
+- "CGFloat"
+- "UIFont"
+- !private "KLNBorder"
+- !private "KLNBgColorGreen"
+- !private "/"
+- !private "KLNTextColor"
+- !private "KLNImageURL"
+- "StringLiteralType"
+- "KlaviyoTheme"
+- "=="
+- !private "~="
+- !private "KLNBorderRadius"
+- !private "KLNMessageFont"
+- !private "KLNBgColorRed"
+- "Bool"
+- "UIColor"
+- "Double"
+- !private "!="
+- !private "KLNBgColorAlpha"
+- !private "KLNTitleText"
+- !private "NSURL"
+- !private "KLNBorderWeight"
+- "String"
+- "AnyObject"
+- "KlaviyoNotificationImage"
+- !private "KLNImageScale"
+- !private "KLNBgColorBlue"
+- !private "KLNDeepLink"
+- !private "KLNTitleFont"
+- !private "NSData"
+- "UIImage"
+- !private "KLNBackgroundColor"
+- "BooleanLiteralType"
+- !private "Int"
+- !private "KLNBorderColor"
+- "KlaviyoBorder"
+depends-member:
+- !private ["Ps16AbsoluteValuable", "init"]
+- !private ["Ps9AnyObject", "CGFloat"]
+- !private ["Ps9AnyObject", "KLNBackgroundColor"]
+- !private ["Ps9AnyObject", "KLNBgColorAlpha"]
+- !private ["Ps9AnyObject", "KLNBgColorBlue"]
+- !private ["Ps9AnyObject", "KLNBgColorGreen"]
+- !private ["Ps9AnyObject", "KLNBgColorRed"]
+- !private ["Ps9AnyObject", "KLNBorder"]
+- !private ["Ps9AnyObject", "KLNBorderColor"]
+- !private ["Ps9AnyObject", "KLNBorderRadius"]
+- !private ["Ps9AnyObject", "KLNBorderWeight"]
+- !private ["Ps9AnyObject", "KLNDeepLink"]
+- !private ["Ps9AnyObject", "KLNImagePath"]
+- !private ["Ps9AnyObject", "KLNImageScale"]
+- !private ["Ps9AnyObject", "KLNImageURL"]
+- !private ["Ps9AnyObject", "KLNMessageFont"]
+- !private ["Ps9AnyObject", "KLNOverlayColor"]
+- !private ["Ps9AnyObject", "KLNTextColor"]
+- !private ["Ps9AnyObject", "KLNTitleFont"]
+- !private ["Ps9AnyObject", "KLNTitleText"]
+- !private ["Ps9AnyObject", "KlaviyoBorder"]
+- !private ["Ps9AnyObject", "NSData"]
+- !private ["Ps9AnyObject", "NSURL"]
+- ["Ps9AnyObject", "UIColor"]
+- ["Ps9AnyObject", "UIFont"]
+- !private ["Ps9AnyObject", "UIImage"]
+- !private ["Ps9AnyObject", "alpha"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- ["Ps9AnyObject", "blackColor"]
+- !private ["Ps9AnyObject", "border"]
+- !private ["Ps9AnyObject", "borderColor"]
+- !private ["Ps9AnyObject", "borderWeight"]
+- ["Ps9AnyObject", "clearColor"]
+- !private ["Ps9AnyObject", "cornerRadius"]
+- !private ["Ps9AnyObject", "customizeButtonUI"]
+- !private ["Ps9AnyObject", "deepLink"]
+- !private ["Ps9AnyObject", "image"]
+- !private ["Ps9AnyObject", "imagePath"]
+- !private ["Ps9AnyObject", "imageURL"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "loadImage"]
+- !private ["Ps9AnyObject", "lowercaseString"]
+- !private ["Ps9AnyObject", "messageBodyFont"]
+- !private ["Ps9AnyObject", "overlayColor"]
+- !private ["Ps9AnyObject", "scale"]
+- !private ["Ps9AnyObject", "textColor"]
+- !private ["Ps9AnyObject", "titleColor"]
+- !private ["Ps9AnyObject", "titleFont"]
+- !private ["Ps9AnyObject", "titleText"]
+- ["Ps9AnyObject", "whiteColor"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps22BidirectionalIndexType", "hashValue"]
+- !private ["Ps21BitwiseOperationsType", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["V12CoreGraphics7CGFloat", "init"]
+- !private ["Ps11CVarArgType", "CGFloat"]
+- !private ["Ps11CVarArgType", "KLNBgColorAlpha"]
+- !private ["Ps11CVarArgType", "KLNBgColorBlue"]
+- !private ["Ps11CVarArgType", "KLNBgColorGreen"]
+- !private ["Ps11CVarArgType", "KLNBgColorRed"]
+- ["Ps11CVarArgType", "blackColor"]
+- ["Ps11CVarArgType", "clearColor"]
+- !private ["Ps11CVarArgType", "hashValue"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "lowercaseString"]
+- ["Ps11CVarArgType", "whiteColor"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps10Comparable", "hashValue"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "lowercaseString"]
+- !private ["Ps28CustomDebugStringConvertible", "CGFloat"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "KLNBgColorAlpha"]
+- !private ["Ps28CustomDebugStringConvertible", "KLNBgColorBlue"]
+- !private ["Ps28CustomDebugStringConvertible", "KLNBgColorGreen"]
+- !private ["Ps28CustomDebugStringConvertible", "KLNBgColorRed"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- ["Ps28CustomDebugStringConvertible", "blackColor"]
+- ["Ps28CustomDebugStringConvertible", "clearColor"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "lowercaseString"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", "whiteColor"]
+- !private ["Ps23CustomStringConvertible", "CGFloat"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "KLNBgColorAlpha"]
+- !private ["Ps23CustomStringConvertible", "KLNBgColorBlue"]
+- !private ["Ps23CustomStringConvertible", "KLNBgColorGreen"]
+- !private ["Ps23CustomStringConvertible", "KLNBgColorRed"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "blackColor"]
+- ["Ps23CustomStringConvertible", "clearColor"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "lowercaseString"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", "whiteColor"]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Ps9Equatable", "CGFloat"]
+- !private ["Ps9Equatable", "Dark"]
+- !private ["Ps9Equatable", "KLNBgColorAlpha"]
+- !private ["Ps9Equatable", "KLNBgColorBlue"]
+- !private ["Ps9Equatable", "KLNBgColorGreen"]
+- !private ["Ps9Equatable", "KLNBgColorRed"]
+- !private ["Ps9Equatable", "Light"]
+- ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "blackColor"]
+- ["Ps9Equatable", "clearColor"]
+- ["Ps9Equatable", "hashValue"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "lowercaseString"]
+- ["Ps9Equatable", "rawValue"]
+- ["Ps9Equatable", "whiteColor"]
+- ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "lowercaseString"]
+- !private ["Ps23FloatLiteralConvertible", "init"]
+- !private ["Ps17FloatingPointType", "init"]
+- !private ["Ps16ForwardIndexType", "hashValue"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "CGFloat"]
+- !private ["Ps8Hashable", "Dark"]
+- !private ["Ps8Hashable", "KLNBgColorAlpha"]
+- !private ["Ps8Hashable", "KLNBgColorBlue"]
+- !private ["Ps8Hashable", "KLNBgColorGreen"]
+- !private ["Ps8Hashable", "KLNBgColorRed"]
+- !private ["Ps8Hashable", "Light"]
+- ["Ps8Hashable", "RawValue"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "blackColor"]
+- ["Ps8Hashable", "clearColor"]
+- ["Ps8Hashable", "hashValue"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "lowercaseString"]
+- ["Ps8Hashable", "rawValue"]
+- ["Ps8Hashable", "whiteColor"]
+- ["Ps8Hashable", ""]
+- !private ["SQ", "deinit"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "hashValue"]
+- !private ["Ps21IntegerArithmeticType", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "init"]
+- !private ["Ps11IntegerType", "hashValue"]
+- ["C12KlaviyoSwift13KlaviyoBorder", "AnyObject"]
+- ["C12KlaviyoSwift13KlaviyoBorder", "CGFloat"]
+- !private ["C12KlaviyoSwift13KlaviyoBorder", "Double"]
+- !private ["C12KlaviyoSwift13KlaviyoBorder", "KLNBorderColor"]
+- !private ["C12KlaviyoSwift13KlaviyoBorder", "KLNBorderRadius"]
+- !private ["C12KlaviyoSwift13KlaviyoBorder", "KLNBorderWeight"]
+- ["C12KlaviyoSwift13KlaviyoBorder", "String"]
+- ["C12KlaviyoSwift13KlaviyoBorder", "UIColor"]
+- ["C12KlaviyoSwift13KlaviyoBorder", "borderColor"]
+- ["C12KlaviyoSwift13KlaviyoBorder", "borderWeight"]
+- ["C12KlaviyoSwift13KlaviyoBorder", "cornerRadius"]
+- ["C12KlaviyoSwift13KlaviyoBorder", "deinit"]
+- ["C12KlaviyoSwift13KlaviyoBorder", "init"]
+- ["C12KlaviyoSwift13KlaviyoButton", "AnyObject"]
+- ["C12KlaviyoSwift13KlaviyoButton", "Bool"]
+- ["C12KlaviyoSwift13KlaviyoButton", "Double"]
+- !private ["C12KlaviyoSwift13KlaviyoButton", "KLNBackgroundColor"]
+- !private ["C12KlaviyoSwift13KlaviyoButton", "KLNBorder"]
+- !private ["C12KlaviyoSwift13KlaviyoButton", "KLNDeepLink"]
+- !private ["C12KlaviyoSwift13KlaviyoButton", "KLNTextColor"]
+- !private ["C12KlaviyoSwift13KlaviyoButton", "KLNTitleText"]
+- ["C12KlaviyoSwift13KlaviyoButton", "KlaviyoBorder"]
+- ["C12KlaviyoSwift13KlaviyoButton", "String"]
+- ["C12KlaviyoSwift13KlaviyoButton", "UIColor"]
+- ["C12KlaviyoSwift13KlaviyoButton", "backgroundColor"]
+- ["C12KlaviyoSwift13KlaviyoButton", "border"]
+- ["C12KlaviyoSwift13KlaviyoButton", "buttonBorderRadius"]
+- ["C12KlaviyoSwift13KlaviyoButton", "buttonText"]
+- ["C12KlaviyoSwift13KlaviyoButton", "customizeButtonUI"]
+- ["C12KlaviyoSwift13KlaviyoButton", "deepLink"]
+- ["C12KlaviyoSwift13KlaviyoButton", "deinit"]
+- ["C12KlaviyoSwift13KlaviyoButton", "hasDeepLink"]
+- ["C12KlaviyoSwift13KlaviyoButton", "init"]
+- ["C12KlaviyoSwift13KlaviyoButton", "titleColor"]
+- ["C12KlaviyoSwift13KlaviyoButton", "titleText"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "AnyObject"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "Double"]
+- !private ["C12KlaviyoSwift24KlaviyoNotificationImage", "KLNImagePath"]
+- !private ["C12KlaviyoSwift24KlaviyoNotificationImage", "KLNImageScale"]
+- !private ["C12KlaviyoSwift24KlaviyoNotificationImage", "KLNImageURL"]
+- !private ["C12KlaviyoSwift24KlaviyoNotificationImage", "NSData"]
+- !private ["C12KlaviyoSwift24KlaviyoNotificationImage", "NSURL"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "String"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "UIImage"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "deinit"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "image"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "imagePath"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "imageURL"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "init"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "loadImage"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "scale"]
+- ["C12KlaviyoSwift24KlaviyoNotificationImage", "setNotificationImage"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "AnyObject"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "CGFloat"]
+- !private ["C12KlaviyoSwift12KlaviyoStyle", "Double"]
+- !private ["C12KlaviyoSwift12KlaviyoStyle", "KLNBackgroundColor"]
+- !private ["C12KlaviyoSwift12KlaviyoStyle", "KLNBgColorAlpha"]
+- !private ["C12KlaviyoSwift12KlaviyoStyle", "KLNBorder"]
+- !private ["C12KlaviyoSwift12KlaviyoStyle", "KLNMessageFont"]
+- !private ["C12KlaviyoSwift12KlaviyoStyle", "KLNOverlayColor"]
+- !private ["C12KlaviyoSwift12KlaviyoStyle", "KLNTextColor"]
+- !private ["C12KlaviyoSwift12KlaviyoStyle", "KLNTitleFont"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "KlaviyoBorder"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "KlaviyoTheme"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "String"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "UIColor"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "UIFont"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "alpha"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "backgroundColor"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "border"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "deinit"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "hasBorder"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "init"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "messageBodyFont"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "overlayColor"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "textColor"]
+- ["C12KlaviyoSwift12KlaviyoStyle", "titleFont"]
+- ["O12KlaviyoSwift12KlaviyoTheme", "Dark"]
+- ["O12KlaviyoSwift12KlaviyoTheme", "Light"]
+- ["O12KlaviyoSwift12KlaviyoTheme", "RawValue"]
+- ["O12KlaviyoSwift12KlaviyoTheme", "String"]
+- ["O12KlaviyoSwift12KlaviyoTheme", "deinit"]
+- ["O12KlaviyoSwift12KlaviyoTheme", "hashValue"]
+- ["O12KlaviyoSwift12KlaviyoTheme", "init"]
+- ["O12KlaviyoSwift12KlaviyoTheme", "rawValue"]
+- !private ["Ps14MirrorPathType", "hashValue"]
+- !private ["Ps14MirrorPathType", "lowercaseString"]
+- !private ["PSo8NSCoding", "CGFloat"]
+- !private ["PSo8NSCoding", "KLNBgColorAlpha"]
+- !private ["PSo8NSCoding", "KLNBgColorBlue"]
+- !private ["PSo8NSCoding", "KLNBgColorGreen"]
+- !private ["PSo8NSCoding", "KLNBgColorRed"]
+- ["PSo8NSCoding", "blackColor"]
+- ["PSo8NSCoding", "clearColor"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "lowercaseString"]
+- ["PSo8NSCoding", "whiteColor"]
+- !private ["PSo9NSCopying", "CGFloat"]
+- !private ["PSo9NSCopying", "KLNBgColorAlpha"]
+- !private ["PSo9NSCopying", "KLNBgColorBlue"]
+- !private ["PSo9NSCopying", "KLNBgColorGreen"]
+- !private ["PSo9NSCopying", "KLNBgColorRed"]
+- ["PSo9NSCopying", "blackColor"]
+- ["PSo9NSCopying", "clearColor"]
+- ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "lowercaseString"]
+- ["PSo9NSCopying", "whiteColor"]
+- !private ["CSo6NSData", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "lowercaseString"]
+- ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "CGFloat"]
+- !private ["CSo8NSObject", "Double"]
+- !private ["CSo8NSObject", "Int"]
+- !private ["CSo8NSObject", "KLNBgColorAlpha"]
+- !private ["CSo8NSObject", "KLNBgColorBlue"]
+- !private ["CSo8NSObject", "KLNBgColorGreen"]
+- !private ["CSo8NSObject", "KLNBgColorRed"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "blackColor"]
+- ["CSo8NSObject", "clearColor"]
+- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "lowercaseString"]
+- ["CSo8NSObject", "whiteColor"]
+- !private ["PSo16NSObjectProtocol", "CGFloat"]
+- !private ["PSo16NSObjectProtocol", "KLNBgColorAlpha"]
+- !private ["PSo16NSObjectProtocol", "KLNBgColorBlue"]
+- !private ["PSo16NSObjectProtocol", "KLNBgColorGreen"]
+- !private ["PSo16NSObjectProtocol", "KLNBgColorRed"]
+- ["PSo16NSObjectProtocol", "blackColor"]
+- ["PSo16NSObjectProtocol", "clearColor"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "lowercaseString"]
+- ["PSo16NSObjectProtocol", "whiteColor"]
+- !private ["PSo14NSSecureCoding", "CGFloat"]
+- !private ["PSo14NSSecureCoding", "KLNBgColorAlpha"]
+- !private ["PSo14NSSecureCoding", "KLNBgColorBlue"]
+- !private ["PSo14NSSecureCoding", "KLNBgColorGreen"]
+- !private ["PSo14NSSecureCoding", "KLNBgColorRed"]
+- ["PSo14NSSecureCoding", "blackColor"]
+- ["PSo14NSSecureCoding", "clearColor"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "lowercaseString"]
+- ["PSo14NSSecureCoding", "whiteColor"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "lowercaseString"]
+- !private ["CSo5NSURL", "init"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "lowercaseString"]
+- !private ["Ps21RandomAccessIndexType", "hashValue"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps16RawRepresentable", "Dark"]
+- !private ["Ps16RawRepresentable", "Light"]
+- ["Ps16RawRepresentable", "RawValue"]
+- ["Ps16RawRepresentable", "hashValue"]
+- ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "rawValue"]
+- ["Ps16RawRepresentable", ""]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Ps17SignedIntegerType", "hashValue"]
+- !private ["Ps16SignedNumberType", "hashValue"]
+- !private ["Ps16SignedNumberType", "init"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Ps10Streamable", "lowercaseString"]
+- !private ["Ps10Strideable", "hashValue"]
+- !private ["Ps10Strideable", "init"]
+- ["SS", "deinit"]
+- !private ["SS", "lowercaseString"]
+- !private ["Ps30StringInterpolationConvertible", "lowercaseString"]
+- !private ["Ps24StringLiteralConvertible", "lowercaseString"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- ["CSo7UIColor", "AnyObject"]
+- !private ["CSo7UIColor", "CGFloat"]
+- !private ["CSo7UIColor", "Double"]
+- !private ["CSo7UIColor", "Int"]
+- !private ["CSo7UIColor", "KLNBgColorAlpha"]
+- !private ["CSo7UIColor", "KLNBgColorBlue"]
+- !private ["CSo7UIColor", "KLNBgColorGreen"]
+- !private ["CSo7UIColor", "KLNBgColorRed"]
+- ["CSo7UIColor", "String"]
+- ["CSo7UIColor", "blackColor"]
+- ["CSo7UIColor", "clearColor"]
+- ["CSo7UIColor", "init"]
+- ["CSo7UIColor", "whiteColor"]
+- ["CSo6UIFont", "init"]
+- !private ["CSo7UIImage", "init"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "lowercaseString"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "lowercaseString"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "lowercaseString"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "lowercaseString"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "lowercaseString"]
+- !private ["Ps19_CVarArgAlignedType", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps24_ColorLiteralConvertible", "CGFloat"]
+- !private ["Ps24_ColorLiteralConvertible", "KLNBgColorAlpha"]
+- !private ["Ps24_ColorLiteralConvertible", "KLNBgColorBlue"]
+- !private ["Ps24_ColorLiteralConvertible", "KLNBgColorGreen"]
+- !private ["Ps24_ColorLiteralConvertible", "KLNBgColorRed"]
+- ["Ps24_ColorLiteralConvertible", "blackColor"]
+- ["Ps24_ColorLiteralConvertible", "clearColor"]
+- !private ["Ps24_ColorLiteralConvertible", "init"]
+- ["Ps24_ColorLiteralConvertible", "whiteColor"]
+- !private ["Ps32_FileReferenceLiteralConvertible", "init"]
+- !private ["Ps24_ImageLiteralConvertible", "init"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps22_IntegerArithmeticType", "hashValue"]
+- !private ["Ps12_IntegerType", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "lowercaseString"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "hashValue"]
+- !private ["Ps12_Reflectable", "Index"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "hashValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "lowercaseString"]
+- !private ["Ps12_Reflectable", "subscript"]
+- !private ["Ps18_SignedIntegerType", "hashValue"]
+depends-nominal:
+- !private "Ps16AbsoluteValuable"
+- "Ps9AnyObject"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "V12CoreGraphics7CGFloat"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps23FloatLiteralConvertible"
+- !private "Ps17FloatingPointType"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "SQ"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- "C12KlaviyoSwift13KlaviyoBorder"
+- "C12KlaviyoSwift13KlaviyoButton"
+- "C12KlaviyoSwift24KlaviyoNotificationImage"
+- "C12KlaviyoSwift12KlaviyoStyle"
+- "O12KlaviyoSwift12KlaviyoTheme"
+- !private "Ps14MirrorPathType"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- !private "CSo6NSData"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo5NSURL"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- !private "Ps16OutputStreamType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Vs5Range"
+- "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Vs5Slice"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
+- "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "PSo29UIAccessibilityIdentification"
+- "CSo7UIColor"
+- "CSo6UIFont"
+- !private "CSo7UIImage"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps19_CVarArgAlignedType"
+- !private "Ps22_CVarArgPassedAsDouble"
+- "Ps24_ColorLiteralConvertible"
+- !private "Ps32_FileReferenceLiteralConvertible"
+- !private "Ps24_ImageLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/Pods/Target Support Files/KlaviyoSwift/KlaviyoSwift-umbrella.h"
+- "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/DerivedData/KlaviyoSwift/Build/Intermediates/Pods.build/Debug-iphonesimulator/KlaviyoSwift.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "925dacb690e4ad0fb80fedc3a4b94bd6"

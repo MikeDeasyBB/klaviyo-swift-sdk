@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
-options: "697953e940d4793338e5532de5fd6326"
-build_time: [522958339, 600472000]
+options: "662a0141eeea3ca6b13512fbafb90fa2"
+build_time: [523544404, 161063000]
 inputs:
   "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/MenuPageViewController.swift": [522958335, 0]
   "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/KlaviyoSwift/MenuItemTableViewCell.swift": [497026365, 0]

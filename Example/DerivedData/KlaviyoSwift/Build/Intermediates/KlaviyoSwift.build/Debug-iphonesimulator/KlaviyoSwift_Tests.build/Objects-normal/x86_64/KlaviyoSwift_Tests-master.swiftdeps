@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "fa3dd7700a8fc03440179fc56f51290b"
+build_time: [523554026, 607940000]
+inputs:
+  "/Users/katherinekeuper/Desktop/KlaviyoSDK/KlaviyoSwift/Example/Tests/Tests.swift": [497373931, 0]
